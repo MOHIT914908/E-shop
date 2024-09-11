@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Categories } from '../assets/mockdata'
 import first from "../assets/first.avif"
-import InfoSEc from '../components/InfoSEc'
+import InfoSEc from '../components/InfoSec'
 import Who from '../components/Who'
 import { setProductS } from '../redux/ProductSlice'
 import { useDispatch,useSelector } from 'react-redux'
