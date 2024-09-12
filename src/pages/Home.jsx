@@ -8,6 +8,7 @@ import { useDispatch,useSelector } from 'react-redux'
 import { mockData } from '../assets/mockdata'
 import Productcart from '../components/Productcart'
 import Shop from './Shop'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
   const dispatch =useDispatch();
@@ -15,6 +16,10 @@ const Home = () => {
   useEffect(()=>{
     dispatch(setProductS(mockData))
   },[])
+  const navigate=useNavigate();
+   const  handleshop=()=>{
+   navigate("/shop")
+  }
 
 
   return (
@@ -41,7 +46,7 @@ const Home = () => {
           <h2 className='text-3xl font-bold'>WELCOME TO e-Shop</h2>
           <p className='text-xl mt-2.5 font-bold text-gray-800'>MILLIONS+ PRODUCTS</p>
           <button className='bg-red-600 px-8 py-1.5 text-white mt-4 hover:bg-red-700
-          transform transition-transform duration-300 hover:scale-105 rounded-md'>SHOP NOW</button>
+          transform transition-transform duration-300 hover:scale-105 rounded-md'onClick={handleshop}>SHOP NOW</button>
          </div>
         </div>
       </div>
